@@ -21,6 +21,9 @@
   const navToggle  = document.getElementById('navToggle');
   const navAnchors = Array.from(document.querySelectorAll('.nav-links a[data-section]'));
 
+  /* ─── Mobile detection ─── */
+  const isMobile = () => window.innerWidth <= 600;
+
   /* ─── Light/dark panel map ─── */
   const isDark = [false, true, false, true, false, true]; // per panel
 
@@ -109,6 +112,7 @@
   const WHEEL_THRESHOLD = 60;
 
   window.addEventListener('wheel', (e) => {
+    if (isMobile()) return;
     e.preventDefault();
     if (isAnimating) return;
     wheelAccum += e.deltaY;
@@ -135,6 +139,7 @@
     if (touchStart === null) return;
     const delta = touchStart - e.changedTouches[0].clientY;
     touchStart = null;
+    if (isMobile()) return;
     if (isAnimating) return;
     if (delta > SWIPE_THRESHOLD)       goTo(current + 1);
     else if (delta < -SWIPE_THRESHOLD) goTo(current - 1);
@@ -335,6 +340,7 @@
   // Wheel
   window.onwheel = null;
   window.addEventListener('wheel', (e) => {
+    if (isMobile()) return;
     e.preventDefault();
     if (isAnimating) return;
     wheelAccum += e.deltaY;
@@ -346,6 +352,7 @@
     if (touchStart === null) return;
     const delta = touchStart - e.changedTouches[0].clientY;
     touchStart = null;
+    if (isMobile()) return;
     if (isAnimating) return;
     if (delta > SWIPE_THRESHOLD)       dispatch(current + 1);
     else if (delta < -SWIPE_THRESHOLD) dispatch(current - 1);
