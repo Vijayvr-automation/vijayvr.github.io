@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vijayaragavan R – Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="navbar" id="navbar">
+    <a class="nav-brand" href="#home" data-section="0">VIJAY</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"   data-section="1">About</a></li>
+      <li><a href="#tech"    data-section="2">Technologies</a></li>
+      <li><a href="#stats"   data-section="3">Profile</a></li>
+      <li><a href="#projects" data-section="4">Projects</a></li>
+      <li><a href="#contact" data-section="5">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- ═══ SIDE RAIL ═══ -->
+  <aside class="side-rail" id="sideRail">
+    <div class="rail-line"><div class="rail-progress" id="railProgress"></div></div>
+    <div class="rail-dots" id="railDots">
+      <button class="rail-dot active" data-idx="0" aria-label="Home">
+        <span class="dot-label">Home</span>
+      </button>
+      <button class="rail-dot" data-idx="1" aria-label="About">
+        <span class="dot-label">About</span>
+      </button>
+      <button class="rail-dot" data-idx="2" aria-label="Stack">
+        <span class="dot-label">Technologies</span>
+      </button>
+      <button class="rail-dot" data-idx="3" aria-label="Profile">
+        <span class="dot-label">Profile</span>
+      </button>
+      <button class="rail-dot" data-idx="4" aria-label="Projects">
+        <span class="dot-label">Projects</span>
+      </button>
+      <button class="rail-dot" data-idx="5" aria-label="Contact">
+        <span class="dot-label">Contact</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═══ SCROLL CONTAINER ═══ -->
+  <div class="scroll-container" id="scrollContainer">
+
+    <!-- ── SECTION 0 · HOME ── -->
+    <section class="panel panel-home" id="home" data-idx="0">
+      <div class="dust dust-1"></div>
+      <div class="dust dust-2"></div>
+      <div class="hero-monogram" aria-hidden="true">V</div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Automation Test Engineer</p>
+        <h1 class="hero-name">Vijayaragavan R</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tagline">Writing tests that prove the world works.</p>
+        <button class="btn btn-primary scroll-next" data-next="1">
+          <span>Explore</span>
+          <span class="btn-arrow" aria-hidden="true">↓</span>
+        </button>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-hint-line"></span>
+        <span class="scroll-hint-text">scroll</span>
+      </div>
+    </section>
+
+    <!-- ── SECTION 1 · ABOUT ── -->
+    <section class="panel panel-about" id="about" data-idx="1">
+      <div class="panel-inner about-grid">
+        <div class="about-text">
+          <p class="eyebrow">Hello, I'm</p>
+          <h2 class="about-name">Vijayaragavan R</h2>
+          <p class="about-profession">Automation Test Engineer</p>
+          <p class="about-desc">
+            Passionate about building robust, scalable test automation frameworks that catch bugs before users ever see them.
+            I specialise in Selenium with Java, crafting reliable end-to-end suites, integrating CI/CD pipelines, and championing quality across every sprint.
+            I believe clean tests are as important as clean code.
+          </p>
+          <div class="about-btns">
+            <a href="https://drive.google.com/file/d/1BrOLUL89e1TcCxQk4nSPoYv-U16uyJJi/view?usp=sharing"
+               class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              View Resume <span class="btn-arrow">↓</span>
+            </a>
+            <button class="btn btn-outline scroll-next" data-next="5">Get in Touch</button>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="prof-illustration">
+            <div class="prof-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="prof-screen">
+              <div class="prof-code-line w80"></div>
+              <div class="prof-code-line w60 green"></div>
+              <div class="prof-code-line w90"></div>
+              <div class="prof-code-line w50 green"></div>
+              <div class="prof-code-line w70"></div>
+              <div class="prof-code-line w40 green"></div>
+              <div class="prof-code-line w80"></div>
+              <div class="prof-code-line w55 green"></div>
+              <div class="prof-badge">
+                <span class="prof-check">✓</span>
+                <span>All Tests Passed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2 · TECH STACK ── -->
+    <section class="panel panel-tech" id="tech" data-idx="2">
+      <div class="panel-inner tech-inner">
+        <p class="eyebrow">Tools &amp; Technologies</p>
+        <h2 class="section-title">My Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-card" style="--accent:#3DAA6E">
+            <i class="devicon-selenium-original" style="color:#3DAA6E"></i>
+            <span>Selenium</span>
+          </div>
+          <div class="tech-card" style="--accent:#E76F00">
+            <i class="devicon-java-plain colored"></i>
+            <span>Java</span>
+          </div>
+          <div class="tech-card" style="--accent:#C71A36">
+            <i class="devicon-maven-plain colored"></i>
+            <span>Maven</span>
+          </div>
+          <div class="tech-card" style="--accent:#0078D4">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>SQL</span>
+          </div>
+          <div class="tech-card" style="--accent:#E44D26">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+          </div>
+          <div class="tech-card" style="--accent:#264DE4">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+          </div>
+          <div class="tech-card" style="--accent:#1A1A2E">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="tech-card" style="--accent:#23D96C">
+            <i class="devicon-cucumber-plain colored"></i>
+            <span>Cucumber</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3 · STATS / PROFILE ── -->
+    <section class="panel panel-stats" id="stats" data-idx="3">
+      <div class="panel-inner stats-inner">
+        <div class="stats-left">
+          <p class="eyebrow">About Me</p>
+          <h2 class="section-title">A little more<br/>about who I am</h2>
+          <p class="stats-desc">
+            I am a dedicated Automation Test Engineer with a keen eye for detail and a drive to deliver high-quality software.
+            From writing Page Object Model frameworks to integrating tests into GitHub Actions pipelines,
+            I enjoy solving the puzzle of making software work — and proving that it does.
+          </p>
+        </div>
+        <div class="stats-right">
+          <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-label">Technologies</span>
+            <span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card always-learning">
+            <span class="stat-icon">∞</span>
+            <span class="stat-label">Always Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4 · PROJECTS ── -->
+    <section class="panel panel-projects" id="projects" data-idx="4">
+      <div class="panel-inner projects-inner">
+        <p class="eyebrow">My Work</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-placeholder">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="64" height="48" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 28h64" stroke="currentColor" stroke-width="2"/>
+              <circle cx="18" cy="22" r="2" fill="currentColor"/>
+              <circle cx="26" cy="22" r="2" fill="currentColor"/>
+              <circle cx="34" cy="22" r="2" fill="currentColor"/>
+              <path d="M24 44l10-8 8 6 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="placeholder-note">Projects coming soon — Vijayaragavan is currently building and will add them here shortly.</p>
+          <button class="btn btn-outline scroll-next" data-next="5">Get in Touch Instead →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5 · CONTACT ── -->
+    <section class="panel panel-contact" id="contact" data-idx="5">
+      <div class="panel-inner contact-inner">
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="contact-name">Vijayaragavan R</h2>
+        <p class="contact-subtitle">Automation Test Engineer · Open to Opportunities</p>
+
+        <div class="contact-cards">
+          <a href="tel:+916374259458" class="contact-card">
+            <div class="contact-icon phone-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.75 12 19.79 19.79 0 0 1 1.72 3.41 2 2 0 0 1 3.7 1.22h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Mobile</span>
+              <span class="contact-value">+91 63742 59458</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a href="mailto:vijayvrx0@gmail.com" class="contact-card">
+            <div class="contact-icon gmail-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.907 1.528-1.148C21.69 2.28 24 3.434 24 5.457z" fill="#EA4335"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">vijayvrx0@gmail.com</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a href="https://linkedin.com/in/vijayvrx" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon linkedin-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0077B5"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/vijayvrx</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="contact-socials">
+          <a href="mailto:vijayvrx0@gmail.com" class="social-btn gmail" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.907 1.528-1.148C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/vijayvrx" target="_blank" rel="noopener" class="social-btn linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2025 Vijayaragavan R · Automation Test Engineer</p>
+      </footer>
+    </section>
+
+  </div><!-- /scroll-container -->
+
+  <!-- ═══ CURSOR GLOW ═══ -->
+  <div id="cursor-glow"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
