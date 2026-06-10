@@ -5,7 +5,38 @@
 ══════════════════════════════════════════════ */
 (function () {
   'use strict';
+  /* ==========================================
+     MOBILE MODE
+  ========================================== */
+  const isMobile = window.innerWidth <= 768;
 
+  if (isMobile) {
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    // Mobile menu toggle
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+
+    // Disable cursor glow
+    const glow = document.getElementById('cursor-glow');
+    if (glow) glow.style.display = 'none';
+
+    // Stop desktop full-page slider from running
+    return;
+  }
+   
   const MOBILE_BP     = 600;
   const TOTAL         = 6;
   const ANIM_DUR      = 920;
