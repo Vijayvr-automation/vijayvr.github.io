@@ -16,26 +16,31 @@
     const navLinks = document.getElementById('navLinks');
 
     // Mobile menu toggle
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+    if (isMobile) {
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (navToggle && navLinks) {
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
       });
+    });
 
-      // Close menu when clicking a link
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('open');
-        });
-      });
-    }
-
-    // Disable cursor glow
-    const glow = document.getElementById('cursor-glow');
-    if (glow) glow.style.display = 'none';
-
-    // Stop desktop full-page slider from running
-    return;
   }
+
+  const glow = document.getElementById('cursor-glow');
+
+  if (glow) {
+    glow.style.display = 'none';
+  }
+}
    
   const MOBILE_BP     = 600;
   const TOTAL         = 6;
