@@ -884,25 +884,43 @@ body.rail-light .rail-dot:hover { border-color: var(--gold); }
 @media (max-width: 600px) {
 
   /* ── Layout: disable snap, restore normal flow ── */
-  body { overflow: auto; }
+  html, body {
+    overflow: auto !important;
+    overflow-x: hidden;
+    height: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
 
   .scroll-container {
-    position: static;
-    overflow: visible;
-    height: auto;
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100%;
   }
 
   .panel {
-    position: relative;
-    height: auto;
+    position: relative !important;
+    height: auto !important;
     min-height: 100svh;
-    overflow: visible;
-    transform: none !important;   /* override any JS translateY */
+    overflow: visible !important;
+    transform: none !important;
     transition: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .panel[data-idx="0"],
+  .panel[data-idx="1"],
+  .panel[data-idx="2"],
+  .panel[data-idx="3"],
+  .panel[data-idx="4"],
+  .panel[data-idx="5"] {
+    transform: none !important;
   }
 
   .panel-inner {
     height: auto;
+    min-height: unset;
     padding: calc(var(--nav-h) + 1.6rem) 6vw 3rem;
     align-items: flex-start;
   }
